@@ -115,9 +115,4 @@ node_modules
 
 .vs
 Build
-build.zip
-src/Velocar.VSP.Web/static/CarplateImages/
-src/Velocar.VSP.Service/WebConsole/static/CarplateImages
-CarplateImages
-saved
 *.nupkg
