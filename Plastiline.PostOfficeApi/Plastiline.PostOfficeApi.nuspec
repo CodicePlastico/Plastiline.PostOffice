@@ -12,4 +12,8 @@
     <copyright>Copyright 2017</copyright>
     <tags>mail;smtp;.net</tags>
   </metadata>
+  <files>
+    <file src="bin\Debug\net45\*" target="lib\net45" />
+    <file src="bin\Debug\netstandard1.6\*" target="lib\netstandard1.6" />
+  </files>
 </package>
