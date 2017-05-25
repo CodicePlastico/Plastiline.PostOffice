@@ -2,7 +2,7 @@
 
 namespace Plastiline.PostOfficeApi
 {
-    public class Class1
+    public class SendLetterCommand
     {
     }
 }
