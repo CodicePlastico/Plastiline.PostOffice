@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Plastiline.PostOfficeApi</id>
-    <version>0.0.2</version>
+    <version>1.0.2</version>
     <title>Plastiline.PostOfficeApi</title>
     <authors>Codiceplastico SRL</authors>
     <owners>Codiceplastico SRL</owners>
@@ -14,6 +14,7 @@
   </metadata>
   <files>
     <file src="bin\Debug\net45\*" target="lib\net45" />
-    <file src="bin\Debug\netstandard1.6\*" target="lib\netstandard1.6" />
+    <file src="bin\Debug\net46\*" target="lib\net46" />
+    <!--<file src="bin\Debug\netstandard1.6\*" target="lib\netstandard1.6" />-->
   </files>
 </package>

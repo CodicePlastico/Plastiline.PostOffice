@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Plastiline.PostOffice</id>
-    <version>0.0.2</version>
+    <version>1.0.2</version>
     <title>Plastiline.PostOffice</title>
     <authors>Codiceplastico SRL</authors>
     <owners>Codiceplastico SRL</owners>
@@ -12,11 +12,12 @@
     <copyright>Copyright 2017</copyright>
     <tags>mail;smtp;.net</tags>
     <dependencies>
-      <dependency id="Plastiline.PostOfficeApi" version="0.0.2" />
+      <dependency id="Plastiline.PostOfficeApi" version="1.0.2" />
     </dependencies>
   </metadata>
   <files>
     <file src="bin\Debug\net45\*" target="lib\net45" />
-    <file src="bin\Debug\netstandard1.6\*" target="lib\netstandard1.6" />
+    <file src="bin\Debug\net46\*" target="lib\net46" />
+    <!--<file src="bin\Debug\netstandard1.6\*" target="lib\netstandard1.6" />-->
   </files>  
 </package>

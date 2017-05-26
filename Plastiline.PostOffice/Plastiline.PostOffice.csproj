@@ -5,14 +5,17 @@
     <Title>Plastiline.PostOffice</Title>
     <Description>Plastiline.PostOffice</Description>
     <Authors>Pietro Martinelli</Authors>
-    <TargetFrameworks>net45;netstandard1.6</TargetFrameworks>
+    <TargetFrameworks>net45;net46</TargetFrameworks>
   </PropertyGroup>
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' OR '$(TargetFramework)' == 'net46' ">
     <Reference Include="System" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Mail" />
   </ItemGroup>
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
-    <PackageReference Include="System.Collections.Concurrent" Version="4.3.0" />
-    <PackageReference Include="System.Collections.NonGeneric" Version="4.3.0" />
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp2' ">
+    <PackageReference Include="System.Collections.Concurrent" Version="4.0.0.0" />
+    <PackageReference Include="System.Collections.NonGeneric" Version="4.0.0.0" />
+    <PackageReference Include="System" Version="4.0.0.0" />
   </ItemGroup>  
   <ItemGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <Reference Include="Plastiline.PostOfficeApi" />
