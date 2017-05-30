@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Plastiline.PostOffice</id>
-    <version>1.0.2</version>
+    <version>1.1.1</version>
     <title>Plastiline.PostOffice</title>
     <authors>Codiceplastico SRL</authors>
     <owners>Codiceplastico SRL</owners>
@@ -12,7 +12,7 @@
     <copyright>Copyright 2017</copyright>
     <tags>mail;smtp;.net</tags>
     <dependencies>
-      <dependency id="Plastiline.PostOfficeApi" version="1.0.2" />
+      <dependency id="Plastiline.PostOfficeApi" version="1.1.1" />
     </dependencies>
   </metadata>
   <files>

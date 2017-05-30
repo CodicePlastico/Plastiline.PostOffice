@@ -82,8 +82,9 @@ namespace Plastiline.PostOffice.Sender
                 Port = configuration.Port,
                 Host = configuration.Host,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
-                UseDefaultCredentials = false
-            };
+                UseDefaultCredentials = false,
+                EnableSsl = configuration.EnableSsl
+        };
             if (configuration.RequiresAuthentication)
             {
                 client.Credentials = new NetworkCredential(configuration.Username, configuration.Password);
