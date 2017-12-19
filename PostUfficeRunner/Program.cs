@@ -27,7 +27,9 @@ namespace PostUfficeRunner {
                         Id = "OriginalFileName.data",
                         AttachmentName = "MyAttachment.txt"
                     }
-                }
+                },
+                Cc = new [] { "umberto@codiceplastico.com" },
+                Bcc = new [] { "pietro@codiceplastico.com" }
             });
         }
     }
@@ -56,7 +58,7 @@ namespace PostUfficeRunner {
             return new EmailTemplate {
                 From = "test@postoffice.com",
                 Subject = "Email test",
-                Body = "Hello, <i>World</i>!",
+                Body = "Hello, <i>World</i>!<br /><p>This is a <strong>paragraph</strong>!</p>",
                 HasHtmlContent = true
             };
         }

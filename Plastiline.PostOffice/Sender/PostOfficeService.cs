@@ -9,6 +9,7 @@ using Plastiline.PostOffice.Configuration;
 using Plastiline.PostOffice.Templating;
 using Attachment = Plastiline.PostOfficeApi.Attachment; 
 using MailAttachment = System.Net.Mail.Attachment;
+using Plastiline.PostOffice.Extensions;
 
 namespace Plastiline.PostOffice.Sender
 {
@@ -46,6 +47,16 @@ namespace Plastiline.PostOffice.Sender
             foreach (string to in command.To)
             {
                 message.To.Add(new MailAddress(to));
+            }
+            
+            foreach (string to in command.Cc.OrEmpty())
+            {
+                message.CC.Add(new MailAddress(to));
+            }
+            
+            foreach (string to in command.Bcc.OrEmpty())
+            {
+                message.Bcc.Add(new MailAddress(to));
             }
             
             if (command.Attachments != null && _attachmentProvider != null)
