@@ -35,7 +35,8 @@ namespace Plastiline.PostOffice.Sender
             {
                 Subject = Interpolate(template.Subject, command.Data),
                 Body = Interpolate(template.Body, command.Data),
-                From = new MailAddress(template.From)
+                From = new MailAddress(template.From),
+                IsBodyHtml = template.HasHtmlContent
             };
             
             foreach (string to in command.To)

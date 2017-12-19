@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plastiline.PostOfficeApi", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plastiline.PostOffice", "Plastiline.PostOffice\Plastiline.PostOffice.csproj", "{9775E173-140E-497A-A2E6-8DD889BE923A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostUfficeRunner", "PostUfficeRunner\PostUfficeRunner.csproj", "{77962810-084D-4ABF-B1BF-AA7BD5C7000F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9775E173-140E-497A-A2E6-8DD889BE923A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9775E173-140E-497A-A2E6-8DD889BE923A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9775E173-140E-497A-A2E6-8DD889BE923A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77962810-084D-4ABF-B1BF-AA7BD5C7000F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77962810-084D-4ABF-B1BF-AA7BD5C7000F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77962810-084D-4ABF-B1BF-AA7BD5C7000F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77962810-084D-4ABF-B1BF-AA7BD5C7000F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
