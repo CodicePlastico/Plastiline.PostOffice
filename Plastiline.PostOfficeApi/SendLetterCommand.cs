@@ -9,6 +9,11 @@ namespace Plastiline.PostOfficeApi
         public IEnumerable<string> Ccn { get; set; }
         public string LetterTemplate { get; set; }
         public IDictionary<string, string> Data { get; set; }
-        public IList<string> Attachments { get; set; }
+        public IList<Attachment> Attachments { get; set; }
+    }
+
+    public class Attachment {
+        public string Id { get; set; }
+        public string AttachmentName { get; set; }
     }
 }

@@ -1,10 +1,14 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Net.Mail;
 using System.Text.RegularExpressions;
+using Plastiline.PostOffice.Attachments;
 using Plastiline.PostOfficeApi;
 using Plastiline.PostOffice.Configuration;
 using Plastiline.PostOffice.Templating;
+using Attachment = Plastiline.PostOfficeApi.Attachment; 
+using MailAttachment = System.Net.Mail.Attachment;
 
 namespace Plastiline.PostOffice.Sender
 {
@@ -12,12 +16,12 @@ namespace Plastiline.PostOffice.Sender
     {
         private readonly SmtpConfigurationProvider _configurationProvider;
         private readonly TemplateProvider _templateProvider;
-        //private readonly IAttachmentProvider _attachmentProvider;
+        private readonly AttachmentProvider _attachmentProvider;
 
-        public PostOfficeService(SmtpConfigurationProvider configurationProvider, TemplateProvider templateProvider/*, IAttachmentProvider attachmentProvider*/)
+        public PostOfficeService(SmtpConfigurationProvider configurationProvider, TemplateProvider templateProvider, AttachmentProvider attachmentProvider = null)
         {
             _templateProvider = templateProvider;
-            //_attachmentProvider = attachmentProvider;
+            _attachmentProvider = attachmentProvider;
             _configurationProvider = configurationProvider;
         }
 
@@ -44,17 +48,17 @@ namespace Plastiline.PostOffice.Sender
                 message.To.Add(new MailAddress(to));
             }
             
-            //if (command.Attachments != null)
-            //{
-            //    foreach (string attachment in command.Attachments)
-            //    {
-            //        Stream stream = _attachmentProvider.ProvideAttachment(attachment);
-            //        if (stream != null)
-            //        {
-            //            message.Attachments.Add(new Attachment(stream, attachment));
-            //        }
-            //    }
-            //}
+            if (command.Attachments != null && _attachmentProvider != null)
+            {
+                foreach (Attachment attachment in command.Attachments)
+                {
+                    Stream stream = _attachmentProvider.ProvideAttachment(attachment.Id);
+                    if (stream != null)
+                    {
+                        message.Attachments.Add(new MailAttachment(stream, attachment.AttachmentName));
+                    }
+                }
+            }
             return message;
         }
 

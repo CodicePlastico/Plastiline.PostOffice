@@ -16,10 +16,10 @@
     <PackageReference Include="System.Collections.Concurrent" Version="4.0.0.0" />
     <PackageReference Include="System.Collections.NonGeneric" Version="4.0.0.0" />
     <PackageReference Include="System" Version="4.0.0.0" />
-  </ItemGroup>  
+  </ItemGroup>
   <ItemGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <Reference Include="Plastiline.PostOfficeApi" />
-  </ItemGroup>  
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Plastiline.PostOfficeApi\Plastiline.PostOfficeApi.csproj" />
   </ItemGroup>
